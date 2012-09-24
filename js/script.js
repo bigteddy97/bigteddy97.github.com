@@ -19,7 +19,7 @@ function getDayAge(date) {
 
 $(function() {
     refresh();
-	setInterval(1000, refresh);
+	setInterval(refresh, 1000);
 
     loadRepos();
 });
