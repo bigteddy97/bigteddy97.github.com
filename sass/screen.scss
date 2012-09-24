@@ -1,0 +1,90 @@
+@import "compass/reset";
+@import "compass";
+
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Montserrat', serif;
+}
+
+.c {
+  width: 960px;
+  margin: 30px auto 10px auto;
+}
+
+h1 {
+  font-family: 'Crete Round', serif;
+  font-size: 50px;
+}
+
+#social {
+  float: right;
+}
+
+#market {
+  font-family: 'Karla', sans-serif;
+  font-size: 30px;
+}
+
+#pic {
+  float: right;
+  border-style: solid;
+  border-color: #000;
+  border-width: 10px;
+}
+
+.projects {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+li {
+  display: inline;
+  float: left;
+  position: relative;
+  margin: 10px;
+  width: 175px;
+  height: 200px;
+  box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 1);
+  word-wrap: break-word;
+  padding: 5px;
+  text-align: -webkit-match-parent;
+}
+
+li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+li a:hover {
+  background-color: #0f0f0f;
+  color: inherit;
+  text-decoration: none;
+}
+
+a > h2 {
+  margin-bottom: 2px;
+  max-width: 160px;
+  overflow: hidden;
+  font-size: 20px;
+}
+a > h3 {
+  font-size: 20px;
+  margin-top: 2px;
+  margin-bottom: 15px;
+  color: #999;
+}
+
+a > h2, a > h3, a > p {
+  margin: 10px 15px;
+}
+
