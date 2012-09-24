@@ -33,10 +33,9 @@ function refresh() {
 }
 
 function loadRepos() {
-    var repos = $.getJSON("https://api.github.com/users/bigteddy97/repos", function(data) {
-       console.log(data)
-        for (var i = data.length - 1; i >= 0; i--) {
-            var repo = data[i];
+    var repos = $.getJSON("https://api.github.com/users/bigteddy97/repos?callback=?", function(data) {
+        for (var i = data.data.length - 1; i >= 0; i--) {
+            var repo = data.data[i];
             $("#project-list").append("<li><a href=\""+repo["html_url"]+"\"><h2>"+repo["name"]+"</h2> <h3>"+repo["language"]+"</h3><p>"+repo["description"]+"</p></a></li>")
         }; 
     });
