@@ -1,4 +1,4 @@
-var start = new Date(1997, 07-1, 10);
+var start = new Date(1997, 7-1, 10);
 
 function getAge(dateString) {
     var today = new Date();
@@ -33,11 +33,16 @@ function refresh() {
 }
 
 function loadRepos() {
-    var repos = $.getJSON("https://api.github.com/users/bigteddy97/repos?callback=?", function(data) {
+    $.getJSON("https://api.github.com/users/bigteddy97/repos?callback=?", function(data) {
+        data.data.sort(custom_sort);
         for (var i = data.data.length - 1; i >= 0; i--) {
             var repo = data.data[i];
-            $("#project-list").append("<li><a href=\""+repo["html_url"]+"\"><h2>"+repo["name"]+"</h2> <h3>"+repo["language"]+"</h3><p>"+repo["description"]+"</p></a></li>")
-        }; 
+            $("#project-list").append("<li><a href=\""+repo.html_url+"\"><h2>"+repo.name+"</h2> <h3>"+repo.language+"</h3><p>"+repo.description+"</p></a></li>");
+        } 
     });
     
+}
+
+function custom_sort(a, b) {
+    return new Date(a.pushed_at).getTime() - new Date(b.pushed_at).getTime();
 }
