@@ -33,7 +33,7 @@ function refresh() {
 }
 
 function loadRepos() {
-    $.getJSON("https://api.github.com/users/bigteddy97/repos?callback=?", function(data) {
+    $.getJSON("https://api.github.com/users/jhbruhn/repos?callback=?", function(data) {
         data.data.sort(custom_sort);
         for (var i = data.data.length - 1; i >= 0; i--) {
             var repo = data.data[i];
